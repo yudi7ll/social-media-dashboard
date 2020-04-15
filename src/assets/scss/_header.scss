@@ -1,0 +1,44 @@
+.header {
+    &__left {
+
+        &--large {
+            margin: 0;
+        }
+
+        &--small {
+            color: hsl(228, 12%, 44%);
+            margin: .5rem 0 1rem;
+            padding: .5rem 0 1rem;
+            border-bottom: solid 1px gray;
+        }
+    }
+
+    &__right {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .header {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem auto;
+
+        &__left {
+            * {
+                margin: 0px;
+            }
+
+            h1 {
+                margin-bottom: .5rem;
+            }
+        }
+
+        &__right {
+
+        }
+    }
+}

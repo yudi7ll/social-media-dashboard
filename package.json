@@ -2,21 +2,22 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-	"homepage": "https://yudi7ll.github.io/social-media-dashboard",
+  "homepage": "https://yudi7ll.github.io/social-media-dashboard",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-		"sass": "sass src/assets/scss/App.scss src/App.css",
-		"sass:watch": "yarn run sass -- --watch",
-		"predeploy": "yarn run sass && yarn run build",
-		"deploy": "gh-pages -d build"
+    "sass": "sass src/assets/scss/App.scss src/App.css",
+    "sass:watch": "yarn run sass -- --watch",
+    "predeploy": "yarn run sass && yarn run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1"

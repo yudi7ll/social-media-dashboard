@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-	box-sizing: border-box;
-  margin: 0;
-	font-family: Inter, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #F8F9FE;
+    box-sizing: border-box;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 1.5rem;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    #root {
+        margin: auto;
+        max-width: 1000px;
+    }
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
