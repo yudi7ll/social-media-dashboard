@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 body {
-    background-color: #F8F9FE;
+    background-color: #fff;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
     font-size: 14px;
@@ -15,8 +15,27 @@ body {
         margin: auto;
         max-width: 1000px;
     }
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+// base text colors
+.text {
+    &--gray { color: $dark-grayish-blue; }
+    &--black { color: #000; }
+    &--white { color: #fff; }
+    &--green { color: $lime-green; }
+    &--red { color: $bright-red; }
+
+    &--big {
+        font-size: 3rem;
+        line-height: 100%;
+    }
 }

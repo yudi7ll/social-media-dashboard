@@ -12,7 +12,7 @@ import {
 } from './components/Icons';
 
 function App() {
-	const AccountProfiles = () => [
+	const BigBoxWithData = () => [
 		{
 			SocialIcon: Facebook,
             socialMedia: 'facebook',
@@ -43,29 +43,105 @@ function App() {
 			ArrowIcon: ArrowDown,
 			user: 'Nathan F.',
 			followers: '8239',
-            followersText: 'SUBSCRIBERS',
 			posts: '144',
             postsTextColor: 'red'
 		}
 	].map(BigBox);
 
+    const SmallBoxWithData = () => [
+        {
+            SocialMediaIcon: Facebook,
+            highlight: 'Page Views',
+            highlightCount: '87',
+            ArrowIcon: ArrowUp,
+            percentage: '3%',
+            percentageColor: 'green'
+        },
+        {
+            SocialMediaIcon: Facebook,
+            highlight: 'Likes',
+            highlightCount: '52',
+            ArrowIcon: ArrowDown,
+            percentage: '2%',
+            percentageColor: 'red'
+        },
+        {
+            SocialMediaIcon: Instagram,
+            highlight: 'Likes',
+            highlightCount: '5462',
+            ArrowIcon: ArrowUp,
+            percentage: '2257%',
+            percentageColor: 'green'
+        },
+        {
+            SocialMediaIcon: Instagram,
+            highlight: 'Profile Views',
+            highlightCount: '52k',
+            ArrowIcon: ArrowUp,
+            percentage: '1375%',
+            percentageColor: 'green'
+        },
+        {
+            SocialMediaIcon: Twitter,
+            highlight: 'Retweets',
+            highlightCount: '117',
+            ArrowIcon: ArrowUp,
+            percentage: '303%',
+            percentageColor: 'green'
+        },
+        {
+            SocialMediaIcon: Twitter,
+            highlight: 'Likes',
+            highlightCount: '507',
+            ArrowIcon: ArrowUp,
+            percentage: '553%',
+            percentageColor: 'green'
+        },
+        {
+            SocialMediaIcon: Youtube,
+            highlight: 'Likes',
+            highlightCount: '107',
+            ArrowIcon: ArrowDown,
+            percentage: '19%',
+            percentageColor: 'red'
+        }, 
+        {
+            SocialMediaIcon: Youtube,
+            highlight: 'Total Views',
+            highlightCount: '1407',
+            ArrowIcon: ArrowDown,
+            percentage: '12%',
+            percentageColor: 'red'
+        }
+    ].map(SmallBox);
+
   return (
 		<>
 			<div className="header">
-				<div className="header__left">
-					<h2 className="header__left--large">Social Media Dashboard</h2>
-					<h4 className="header__left--small">Total Followers: 23,004</h4>
+				<div className="header__title">
+					<h1>Social Media Dashboard</h1>
+					<h4 className="text-gray">Total Followers: 23,004</h4>
 				</div>
-				<div className="header__right">
-					<label htmlFor="toggleThemeBtn">Dark Mode</label>
+                <hr />
+				<div className="header__theme">
+                    <label
+                        className="text--gray"
+                        htmlFor="toggleThemeBtn"
+                    >
+                        Dark Mode
+                    </label>
 					<input type="checkbox" id="toggleThemeBtn" />
 				</div>
 			</div>
 			
-			<div className="main">
-				<AccountProfiles />
-                <SmallBox />
-			</div>
+            <main>
+                <div className="card">
+                    <BigBoxWithData />
+                </div>
+
+                <h2 className="main__title">Overview - Today</h2>
+                <SmallBoxWithData />
+            </main>
 		</>
   );
 }

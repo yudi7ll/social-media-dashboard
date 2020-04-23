@@ -6,33 +6,28 @@ function BigBoxComponent({
     socialMedia,
     user,
     followers,
-    followersText = 'FOLLOWERS',
     ArrowIcon,
     posts,
     postsTextColor = 'green'
 }) {
 	return (
-		<div className="bigbox">
-            <div className={"bigbox__ribbon bigbox__ribbon--".concat(socialMedia)} />
-			<div className="bigbox__account">
+		<div key={ posts } className="card__box card__box--large">
+            <div className={ "card__ribbon card__ribbon--" + socialMedia } />
+			<div className="icon-text-center">
 				<SocialIcon />
-				<span className="bigbox__account--username"> { user }</span>
+				<small className="text--gray">{ user }</small>
 			</div>
-			<div className="bigbox__followers">
-				<div className="bigbox__followers--large">{ followers }</div>
-				<div
-					className="bigbox__followers--small"
-				>
-                    { followersText }
-				</div>
+			<div className="card__followers">
+				<div className="text--big">{ followers }</div>
+                <small className="text--gray">{ socialMedia === 'youtube' ? 'SUBSCRIBERS' : 'FOLLOWERS' }</small>
 			</div>
-			<div className="bigbox__newpost">
-				<ArrowIcon />
-                <span
-                    className={ 'bigbox__newpost--'.concat(postsTextColor) } 
+			<div className="icon-text-center">
+                <ArrowIcon />
+                <small
+                    className={ 'text--' + postsTextColor } 
                 >
-                    { posts + ' Today'}
-                </span>
+                    { posts + ' Today' }
+                </small>
 			</div>
 		</div>
 	);
