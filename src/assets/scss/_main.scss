@@ -15,11 +15,32 @@ main {
         }
     }
 
+    .row { width: 100%; }
+    .flex {
+        display: flex;
+        justify-content: space-between;
+
+        .mb-1 {
+            margin-bottom: 1.5rem;
+        }
+
+        &--start {
+            align-items: flex-start;
+        }
+
+        &--end {
+            align-items: flex-end;
+        }
+    }
+
     .card {
         display: grid;
         grid-gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
         text-align: center;
+        width: 100%;
 
         &__box {
             background-color: $light-grayish-blue;
@@ -27,6 +48,21 @@ main {
             &--large {
                 border-radius: 0px 0px .4rem .4rem;
                 position: relative;
+            }
+
+            &--small {
+                border-radius: .4rem;
+                display: flex;
+                justify-content: space-between;
+                padding: 1.5rem;
+                position: static;
+
+                svg {
+                    vertical-align: middle;
+                }
+                small {
+                    margin-left: .2rem;
+                }
             }
         }
 
@@ -50,140 +86,4 @@ main {
             letter-spacing: .3rem;
         }
     }
-
-    // .bigbox {
-    //     background-color: $light-grayish-blue;
-    //     border-bottom-left-radius: 10px;
-    //     border-bottom-right-radius: 10px;
-    //     margin: 1.5rem 0rem;
-    //     padding: 2rem 0rem;
-    //     text-align: center;
-    //     position: relative;
-    //
-    //     &__ribbon {
-    //         border-radius: 10px 10px 0px 0px;
-    //         height: 4px;
-    //         overflow: hidden;
-    //         position: absolute;
-    //         top: 0;
-    //         left: 0;
-    //         right: 0;
-    //
-    //         &--facebook {
-    //             background-color: $facebook;
-    //         }
-    //
-    //         &--twitter {
-    //             background-color: $twitter;
-    //         }
-    //
-    //         &--instagram {
-    //             background-image: $instagram;
-    //         }
-    //
-    //         &--youtube {
-    //             background-color: $youtube;
-    //         }
-    //     }
-    //     
-    //     &__account {
-    //         align-items: center;
-    //         color: $dark-grayish-blue;
-    //         display: flex;
-    //         justify-content: center;
-    //
-    //         &--username {
-    //             font-size: .8rem;
-    //             margin-left: .5rem;
-    //         }
-    //     }
-    //
-    //     &__followers {
-    //         margin: 1.5rem 0px;
-    //
-    //         &--large {
-    //             color: #252831;
-    //             font-size: 3.5rem;
-    //         }
-    //
-    //         &--small {
-    //             color: $dark-grayish-blue;
-    //             font-size: .8rem;
-    //             font-weight: normal;
-    //             letter-spacing: .3rem;
-    //         }
-    //     }
-    //
-    //     &__newpost {
-    //         align-items: center;
-    //         display: flex;
-    //         justify-content: center;
-    //
-    //         span {
-    //             font-size: .8rem;
-    //             margin-left: .3rem;
-    //         }
-    //
-    //         &--green {
-    //             color: $lime-green;
-    //         }
-    //
-    //         &--red {
-    //             color: $bright-red;
-    //         }
-    //     }
-    // }
-    //
-    // .smallbox {
-    //     background-color: $light-grayish-blue;
-    //     border-radius: 10px;
-    //     display: flex;
-    //     justify-content: space-between;
-    //     margin: 1rem 0rem;
-    //     padding: 2rem;
-    //
-    //     .highlight {
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-between;
-    //
-    //         &__text {
-    //             color: $dark-grayish-blue;
-    //         }
-    //
-    //         &__count {
-    //             font-size: 1.5rem;
-    //             margin-top: 1rem;
-    //         }
-    //     }
-    //
-    //     .percentage {
-    //         align-items: center;
-    //         display: flex;
-    //
-    //         &--mt {
-    //             margin-top: 1rem;
-    //         }
-    //
-    //         &--mr {
-    //             margin-right: .2rem;
-    //         }
-    //
-    //         &--green {
-    //             color: $lime-green;
-    //         }
-    //
-    //         &--red {
-    //             color: $bright-red;
-    //         }
-    //     }
-    //
-    //     &__social {
-    //         align-items: flex-end;
-    //         display: flex;
-    //         flex-direction: column;
-    //         justify-content: space-between;
-    //     }
-    // }
 }
-

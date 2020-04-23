@@ -8,18 +8,22 @@ function SmallBox({
     ArrowIcon,
     percentage,
     percentageColor
-}) {
+}, key) {
     return (
-        <div key={ highlightCount } className="smallbox">
-            <div className="highlight">
-                <div className="highlight__text">{ highlight }</div>
-                <div className="highlight__count">{ highlightCount }</div>
-            </div>
-            <div className="smallbox__social">
-                <SocialMediaIcon />
-                <div className="percentage percentage--mt">
-                    <span className="percentage--mr"><ArrowIcon /></span>
-                    <span className={ 'percentage--' + percentageColor }>{ percentage }</span>
+        <div key={ key } className="card__box card__box--small">
+            <div className="row">
+                <div className="flex flex--start mb-1">
+                    <div className="text--gray mb-1">{ highlight }</div>
+                    <div>
+                        <SocialMediaIcon />
+                    </div>
+                </div>
+                <div className="flex flex--end mb-1">
+                    <div className="text--bigger">{ highlightCount }</div>
+                    <div>
+                        <ArrowIcon />
+                        <small className={ 'text--' + percentageColor }>{ percentage }</small>
+                    </div>
                 </div>
             </div>
         </div>

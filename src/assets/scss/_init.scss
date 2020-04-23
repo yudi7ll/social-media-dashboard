@@ -2,7 +2,6 @@
 
 body {
     background-color: #fff;
-    box-sizing: border-box;
     font-family: Inter, sans-serif;
     font-size: 14px;
     font-weight: bold;
@@ -11,14 +10,15 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
+    * {
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+    }
+
     #root {
         margin: auto;
         max-width: 1000px;
-    }
-
-    * {
-        margin: 0px;
-        padding: 0px;
     }
 }
 
@@ -34,8 +34,16 @@ code {
     &--green { color: $lime-green; }
     &--red { color: $bright-red; }
 
+    &--bigger {
+        font-size: 2rem;
+        line-height: 100%;
+    }
+
     &--big {
         font-size: 3rem;
         line-height: 100%;
     }
 }
+
+.align--left { text-align: left; }
+.align--right { text-align: right; }

@@ -19,7 +19,7 @@ function App() {
 			ArrowIcon: ArrowUp,
 			user: '@nathanf',
 			followers: '1987',
-			posts: '12'
+            posts: '12',
 		},
 		{
 			SocialIcon: Twitter,
@@ -27,7 +27,7 @@ function App() {
 			ArrowIcon: ArrowUp,
 			user: '@nathanf',
 			followers: '1044',
-			posts: '99'
+			posts: '99',
 		},
 		{
 			SocialIcon: Instagram,
@@ -123,7 +123,7 @@ function App() {
 					<h4 className="text-gray">Total Followers: 23,004</h4>
 				</div>
                 <hr />
-				<div className="header__theme">
+				<div className="header__switcher">
                     <label
                         className="text--gray"
                         htmlFor="toggleThemeBtn"
@@ -139,8 +139,10 @@ function App() {
                     <BigBoxWithData />
                 </div>
 
-                <h2 className="main__title">Overview - Today</h2>
-                <SmallBoxWithData />
+                <h2 className="text--gray">Overview - Today</h2>
+                <div className="card">
+                    <SmallBoxWithData />
+                </div>
             </main>
 		</>
   );

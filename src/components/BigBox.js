@@ -9,9 +9,9 @@ function BigBoxComponent({
     ArrowIcon,
     posts,
     postsTextColor = 'green'
-}) {
+}, key) {
 	return (
-		<div key={ posts } className="card__box card__box--large">
+		<div key={ key } className="card__box card__box--large">
             <div className={ "card__ribbon card__ribbon--" + socialMedia } />
 			<div className="icon-text-center">
 				<SocialIcon />

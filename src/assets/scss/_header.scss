@@ -1,6 +1,6 @@
 .header {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 
     &__title {
 
@@ -14,24 +14,30 @@
     hr {
         border-top: solid .5px gray;
         margin-bottom: 1rem;
+
+        @media only screen and (min-width: $mobile-width) {
+            display: none;
+        }
     }
 
-    @media only screen and (min-width: $mobile-width) {
-        hr { display: none; }
-    }
 
 
 
-    &__theme {
+    &__switcher {
         align-items: center;
         display: flex;
         justify-content: space-between;
         margin-bottom: 2rem;
-    }
 
-    // center on desktop
-    @media only screen and (min-width: $mobile-width) {
-        &__theme { justify-content: right; }
+        input {
+            &:checked {
+
+            }
+        }
+
+        @media only screen and (min-width: $mobile-width) {
+            justify-content: flex-end;
+        }
     }
 }
 
