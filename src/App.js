@@ -3,50 +3,50 @@ import './App.css';
 import BigBox from './components/BigBox';
 import SmallBox from './components/SmallBox';
 import {
-	Facebook,
-	Twitter,
-	Instagram,
-	Youtube,
-	ArrowUp,
-	ArrowDown,
+    Facebook,
+    Twitter,
+    Instagram,
+    Youtube,
+    ArrowUp,
+    ArrowDown,
 } from './components/Icons';
 
 function App() {
-	const BigBoxWithData = () => [
-		{
-			SocialIcon: Facebook,
+    const BigBoxWithData = () => [
+        {
+            SocialIcon: Facebook,
             socialMedia: 'facebook',
-			ArrowIcon: ArrowUp,
-			user: '@nathanf',
-			followers: '1987',
+            ArrowIcon: ArrowUp,
+            user: '@nathanf',
+            followers: '1987',
             posts: '12',
-		},
-		{
-			SocialIcon: Twitter,
+        },
+        {
+            SocialIcon: Twitter,
             socialMedia: 'twitter',
-			ArrowIcon: ArrowUp,
-			user: '@nathanf',
-			followers: '1044',
-			posts: '99',
-		},
-		{
-			SocialIcon: Instagram,
+            ArrowIcon: ArrowUp,
+            user: '@nathanf',
+            followers: '1044',
+            posts: '99',
+        },
+        {
+            SocialIcon: Instagram,
             socialMedia: 'instagram',
-			ArrowIcon: ArrowUp,
-			user: '@realnathanf',
-			followers: '11k',
-			posts: '1099'
-		},
-		{
-			SocialIcon: Youtube,
+            ArrowIcon: ArrowUp,
+            user: '@realnathanf',
+            followers: '11k',
+            posts: '1099'
+        },
+        {
+            SocialIcon: Youtube,
             socialMedia: 'youtube',
-			ArrowIcon: ArrowDown,
-			user: 'Nathan F.',
-			followers: '8239',
-			posts: '144',
+            ArrowIcon: ArrowDown,
+            user: 'Nathan F.',
+            followers: '8239',
+            posts: '144',
             postsTextColor: 'red'
-		}
-	].map(BigBox);
+        }
+    ].map(BigBox);
 
     const SmallBoxWithData = () => [
         {
@@ -116,24 +116,24 @@ function App() {
     ].map(SmallBox);
 
   return (
-		<>
-			<div className="header">
-				<div className="header__title">
-					<h1>Social Media Dashboard</h1>
-					<h4 className="text-gray">Total Followers: 23,004</h4>
-				</div>
+        <>
+            <div className="header">
+                <div className="header__title">
+                    <h1>Social Media Dashboard</h1>
+                    <h4 className="text-gray">Total Followers: 23,004</h4>
+                </div>
                 <hr />
-				<div className="header__switcher">
+                <div className="header__switcher">
                     <label
                         className="text--gray"
                         htmlFor="toggleThemeBtn"
                     >
                         Dark Mode
                     </label>
-					<input type="checkbox" id="toggleThemeBtn" />
-				</div>
-			</div>
-			
+                    <input type="checkbox" id="toggleThemeBtn" />
+                </div>
+            </div>
+            
             <main>
                 <div className="card">
                     <BigBoxWithData />
@@ -144,7 +144,7 @@ function App() {
                     <SmallBoxWithData />
                 </div>
             </main>
-		</>
+        </>
   );
 }
 
