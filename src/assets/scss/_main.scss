@@ -5,7 +5,6 @@ main {
         color: $dark-grayish-blue;
     }
 
-    // icon with text center
     .icon-text-center {
         padding: 1.5rem 0rem;
 
@@ -15,22 +14,14 @@ main {
         }
     }
 
-    .row { width: 100%; }
+    .width--100 { width: 100%; }
     .flex {
         display: flex;
         justify-content: space-between;
 
-        .mb-1 {
-            margin-bottom: 1.5rem;
-        }
-
-        &--start {
-            align-items: flex-start;
-        }
-
-        &--end {
-            align-items: flex-end;
-        }
+        .mb-1 { margin-bottom: 1.5rem; }
+        &--start { align-items: flex-start; }
+        &--end { align-items: flex-end; }
     }
 
     .card {
@@ -40,13 +31,29 @@ main {
         margin-top: 1.5rem;
         margin-bottom: 3rem;
         text-align: center;
+        transition: .2s linear;
         width: 100%;
 
+        .ribbon {
+            &--facebook { border-top-color: $facebook; }
+            &--twitter { border-top-color: $twitter; }
+            &--instagram { border-image: $instagram; }
+            &--youtube { border-top-color: $youtube; }
+        }
+
+
         &__box {
-            background-color: $light-grayish-blue;
+            background-color: $very-pale-blue;
+            cursor: pointer;
+            transition: .2s ease-in-out;
+
+            &:hover { background-color: $light-grayish-blue; }
             
             &--large {
-                border-radius: 0px 0px .4rem .4rem;
+                border-radius: 4px;
+                border-top-width: 4px;
+                border-top-style: solid;
+                overflow: hidden;
                 position: relative;
             }
 
@@ -57,28 +64,9 @@ main {
                 padding: 1.5rem;
                 position: static;
 
-                svg {
-                    vertical-align: middle;
-                }
-                small {
-                    margin-left: .2rem;
-                }
+                svg { vertical-align: middle; }
+                small { margin-left: .2rem; }
             }
-        }
-
-        &__ribbon {
-            border-radius: 10px 10px 0px 0px;
-            height: 4px;
-            overflow: hidden;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-
-            &--facebook { background-color: $facebook; }
-            &--twitter { background-color: $twitter; }
-            &--instagram { background-image: $instagram; }
-            &--youtube { background-color: $youtube; }
         }
 
         &__followers small {

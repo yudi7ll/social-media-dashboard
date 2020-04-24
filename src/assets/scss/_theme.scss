@@ -1,0 +1,63 @@
+.dark-theme {
+    background-color: $very-dark-blue-bg;
+    z-index: 1;
+    position: relative;
+
+    * {
+        color: $white;
+    }
+
+    &:before {
+        background-color: $very-dark-blue-top-bg;
+        content: '';
+        display: block;
+        height: 220px;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .overview {
+        color: #fff;
+    }
+
+    .card__box {
+        background-color: $dark-desaturated-blue;
+
+        &:hover {
+            background-color: hsl(228, 28%, 25%);
+        }
+    }
+}
+
+.light-theme {
+    background-color: $white;
+    z-index: 1;
+    position: relative;
+
+    * {
+        color: #000;
+    }
+
+    &:before {
+        background-color: $very-pale-blue;
+        content: '';
+        display: block;
+        height: 220px;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+    }
+
+    .overview {
+        color: $dark-grayish-blue;
+    }
+
+    .card__box {
+        background-color: $light-grayish-blue;
+
+        &:hover {
+            background-color: hsl(227, 47%, 90%);
+        }
+    }
+}

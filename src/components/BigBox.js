@@ -11,8 +11,7 @@ function BigBoxComponent({
     postsTextColor = 'green'
 }, key) {
 	return (
-		<div key={ key } className="card__box card__box--large">
-            <div className={ "card__ribbon card__ribbon--" + socialMedia } />
+		<div key={ key } className={ "card__box card__box--large ribbon--" + socialMedia }>
 			<div className="icon-text-center">
 				<SocialIcon />
 				<small className="text--gray">{ user }</small>

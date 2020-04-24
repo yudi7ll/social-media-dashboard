@@ -11,7 +11,7 @@ function SmallBox({
 }, key) {
     return (
         <div key={ key } className="card__box card__box--small">
-            <div className="row">
+            <div className="width--100">
                 <div className="flex flex--start mb-1">
                     <div className="text--gray mb-1">{ highlight }</div>
                     <div>
