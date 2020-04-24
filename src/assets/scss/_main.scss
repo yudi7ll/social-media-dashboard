@@ -37,7 +37,13 @@ main {
         .ribbon {
             &--facebook { border-top-color: $facebook; }
             &--twitter { border-top-color: $twitter; }
-            &--instagram { border-image: $instagram; }
+            &--instagram {
+                border-top: none;
+                background-image: $instagram;
+                background-repeat: no-repeat;
+                background-size: 100% 4px;
+                background-position: 0 0, 0 100%;
+            }
             &--youtube { border-top-color: $youtube; }
         }
 
