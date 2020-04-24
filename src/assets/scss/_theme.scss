@@ -9,6 +9,7 @@
 
     &:before {
         background-color: $very-dark-blue-top-bg;
+        border-radius: 0px 0px 1rem 1rem;
         content: '';
         display: block;
         height: 220px;
@@ -41,6 +42,7 @@
 
     &:before {
         background-color: $very-pale-blue;
+        border-radius: 0px 0px 1rem 1rem;
         content: '';
         display: block;
         height: 220px;
